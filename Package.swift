@@ -18,11 +18,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "MesonSDK",
-            dependencies: []),
-        .testTarget(
-            name: "MesonSDKTests",
-            dependencies: ["MesonSDK"]),
+        .binaryTarget(name: "MesonSDK", url: "https://mesonsdk.s3.us-east-2.amazonaws.com/ios/sdk/MesonSDK-1.0.0-beta2.zip", checksum: "98b3a8a01bfccde139e6dc762e97d68f267936af43e218d228e112ee809ce907"),
     ]
 )
